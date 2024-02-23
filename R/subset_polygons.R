@@ -1,5 +1,7 @@
 #' @title Subsetting polygons from shape files
-#'
+
+#' @description This function allows you to subset polygons from other data sources (e.g. National Parks, Watersheds, and Cities).
+
 #' @param sf_object an sf object containing information of your shapefile
 #' @param type the type of spatial information of your sf object; currently includes Parks, Watershed, and Cities
 #' @param polygon_name the names of polygons in which you want to subset; if none included then the whole sf object is returned

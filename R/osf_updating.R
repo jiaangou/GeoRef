@@ -1,5 +1,7 @@
 #'@title OSF updating
 
+#' @description This function allows you to download and upload files directly from and to your remote OSF repository
+
 #' @param project an osf_tbl object of the project
 #' @param component the component in which files should be accessed from
 #' @param type if "download" then all files on osf are downloaded ,if "upload",

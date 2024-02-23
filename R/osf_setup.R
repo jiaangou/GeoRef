@@ -1,5 +1,7 @@
 #'@title OSF setup
 
+#' @description This function sets up a connection between your current R session and your project repository on OSF. If a Personal Access Token (PAT) is not provided in the argument, then a prompt will appear and ask for it.
+
 #' @param project_ID a character string specifying the OSF identifier of the project
 #' @param PAT OSF personal access token
 

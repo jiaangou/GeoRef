@@ -1,10 +1,14 @@
 #'@title Calculating spatial statistics
 
+#' @description The function takes in spatial information and calculates its area, centroid positions, and area bin class.
+
 #' @param sf_object an sf object containing information of your shapefile
 #' @param map a logical arugment specifying whether the processed data should be visualized on a map
 
 #' @examples
 #' spatial_statistics(sf_object)
+
+#' @return if view == TRUE, then a map of data is returned. Otherwise a table of calculated statistics is returned
 
 
 #' @import dplyr

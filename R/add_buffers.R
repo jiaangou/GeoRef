@@ -1,7 +1,9 @@
 #' @title Adding buffers to point-only data
 
+#' @description The function takes in tabular data that contains geographic coordinates of point samples, projects it onto a coordinates system (default is ESPG:4269), and creates a buffer around each point. If view = TRUE, then a the buffers are visualized on a map. If a filename is provided, then the processes file is saved into the output_dir directory.
+
+
 #' @param data a tabular data that contains covariates and spatial informationf
-#'
 #' @param crs Coordinate Reference System used for projection
 #' @param buffer_radius radius in meters in which to create buffers
 #' @param file_name the filename in which the exported object will be; if NULL then nothing is exported
@@ -12,13 +14,16 @@
 #' geo_data <- read_csv("my-spatial_data.csv")
 #' add_buffers(data = geo_data, buffer_radius = 50000, view = TRUE)
 
+#' @return if view == TRUE, then a map of output is returned. Otherwise an sf object containing the ID and geometry of points are returned.
+
+
 #' @import dplyr
 #' @import here
 #' @import sf
 #' @import mapview
 
 
-add_buffers <- function(data, crs = 4269, buffer_radius = 500, file_name = NULL, view = FALSE, output_dir = "outdata"){
+add_buffers <- function(data, crs = 4269, buffer_radius = 500, view = FALSE, file_name = NULL, output_dir = "outdata"){
 
   #buffer_radius units are usually in meters but can depend on CRS
   #file_name is the filename to export the output, if NULL then no file is exported
