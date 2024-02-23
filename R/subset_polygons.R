@@ -13,6 +13,13 @@
 #' @return if view == TRUE, then a map of the polygons is returned. Otherwise an sf object is returned containing a subset of the original polygons
 
 #' @examples
+#' census <- here::here("tabular_shapefiles/KML_SHP/CensusSubdivisions_lcsd000b16a_e.shp")%>%
+#' sf::st_read()
+#' polygons <- census$CSDNAME%>%
+#' sample(10)
+#' subset_polygons(census, type = 'Cities', polygon_name = polygons, view = TRUE)
+
+
 
 
 
