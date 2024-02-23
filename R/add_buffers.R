@@ -1,11 +1,16 @@
-#'@title Adding buffers to point-only data
+#' @title Adding buffers to point-only data
 
 #' @param data a tabular data that contains covariates and spatial informationf
+#'
 #' @param crs Coordinate Reference System used for projection
 #' @param buffer_radius radius in meters in which to create buffers
 #' @param file_name the filename in which the exported object will be; if NULL then nothing is exported
 #' @param view a logical argument to specify whether the resulting data should be visualized
 #' @param output_dir directory name in which to export the file; "outdata" is set as the default
+
+#' @examples
+#' geo_data <- read_csv("my-spatial_data.csv")
+#' add_buffers(data = geo_data, buffer_radius = 50000, view = TRUE)
 
 #' @import dplyr
 #' @import here

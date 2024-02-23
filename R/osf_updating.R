@@ -11,6 +11,10 @@
 #' @import mapview
 #' @import osfr
 
+#' @examples
+#' project <- osf_setup(project_ID = "osf_setup")
+#' osf_updating(project = project, component = "Data", type = 'download')
+
 #' @export
 
 osf_updating <- function(project, component, type = c('download','upload'), files = c('outdata','rawdata','tabular_shapefiles'), overwrite = TRUE){
@@ -45,5 +49,3 @@ osf_updating <- function(project, component, type = c('download','upload'), file
 
 }
 
-#osf_updating(project, component = "Data", type = 'upload')
-#osf_updating(project, component = "Data", type = 'download')

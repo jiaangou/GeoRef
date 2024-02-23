@@ -7,6 +7,10 @@
 #' @param view a logical argument to specify whether the resulting data should be visualized
 #' @param output_dir directory name in which to export the file; "outdata" is set as the default
 
+#' @examples
+#' spatial_statistics(sf_object)
+
+
 #' @import dplyr
 #' @import sf
 #' @import mapview

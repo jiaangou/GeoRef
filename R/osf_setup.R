@@ -3,6 +3,9 @@
 #' @param project_ID a character string specifying the OSF identifier of the project
 #' @param PAT OSF personal access token
 
+#' @examples
+#' project <- osf_setup(project_ID = "osf_setup")
+
 #' @export
 
 
