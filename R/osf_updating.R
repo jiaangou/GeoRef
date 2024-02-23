@@ -6,6 +6,11 @@
 #' @param files name of files to be uploaded to OSF
 #' @param overwrite logical argument specifying whether files should be overwritten
 
+#' @import dplyr
+#' @import here
+#' @import mapview
+#' @import osfr
+
 #' @export
 
 osf_updating <- function(project, component, type = c('download','upload'), files = c('outdata','rawdata','tabular_shapefiles'), overwrite = TRUE){

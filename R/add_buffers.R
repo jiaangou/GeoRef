@@ -7,6 +7,11 @@
 #' @param view a logical argument to specify whether the resulting data should be visualized
 #' @param output_dir directory name in which to export the file; "outdata" is set as the default
 
+#' @import dplyr
+#' @import here
+#' @import sf
+#' @import mapview
+
 
 add_buffers <- function(data, crs = 4269, buffer_radius = 500, file_name = NULL, view = FALSE, output_dir = "outdata"){
 
@@ -27,7 +32,7 @@ add_buffers <- function(data, crs = 4269, buffer_radius = 500, file_name = NULL,
   }else{
 
     out <- buffers%>%
-      select(ID, geometry)
+      dplyr::select(ID, geometry)
 
     if(!is.null(file_name)){
 
@@ -52,7 +57,6 @@ add_buffers <- function(data, crs = 4269, buffer_radius = 500, file_name = NULL,
 }
 
 
-#add_buffers(data = selected_points, buffer_radius = 50000, view = TRUE)
 
 
 

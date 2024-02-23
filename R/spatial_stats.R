@@ -7,7 +7,9 @@
 #' @param view a logical argument to specify whether the resulting data should be visualized
 #' @param output_dir directory name in which to export the file; "outdata" is set as the default
 
-
+#' @import dplyr
+#' @import sf
+#' @import mapview
 
 spatial_statistics <- function(sf_object, map = FALSE){
 
@@ -30,7 +32,7 @@ spatial_statistics <- function(sf_object, map = FALSE){
   #Combine
   out <-  data.frame(Area_sqkm = units::set_units(Area, km^2))%>%
     dplyr::bind_cols(coordinates)%>%
-    mutate(Area_bin = case_when(
+    dplyr::mutate(Area_bin = case_when(
       Area_sqkm  < units::set_units(10, km^2) ~ '<10',
       Area_sqkm  < units::set_units(10^2, km^2) ~ '<10^2',
       Area_sqkm  < units::set_units(10^3, km^2) ~ '<10^3',
