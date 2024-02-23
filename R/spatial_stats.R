@@ -1,11 +1,7 @@
-#'@title Adding buffers to point-only data
+#'@title Calculating spatial statistics
 
-#' @param data a tabular data that contains covariates and spatial informationf
-#' @param crs Coordinate Reference System used for projection
-#' @param buffer_radius radius in meters in which to create buffers
-#' @param file_name the filename in which the exported object will be; if NULL then nothing is exported
-#' @param view a logical argument to specify whether the resulting data should be visualized
-#' @param output_dir directory name in which to export the file; "outdata" is set as the default
+#' @param sf_object an sf object containing information of your shapefile
+#' @param map a logical arugment specifying whether the processed data should be visualized on a map
 
 #' @examples
 #' spatial_statistics(sf_object)
@@ -15,7 +11,7 @@
 #' @import sf
 #' @import mapview
 
-spatial_statistics <- function(sf_object, map = FALSE){
+spatial_statistics <- function(sf_object, view = FALSE){
 
   #Turn spherical geometry off
   sf::sf_use_s2(FALSE)
@@ -45,7 +41,7 @@ spatial_statistics <- function(sf_object, map = FALSE){
       TRUE ~ '10^6')
     )
 
-  if(map == TRUE){
+  if(view == TRUE){
     mapview::mapview(ct)
   }else{
     return(out)
