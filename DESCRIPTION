@@ -11,3 +11,14 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/jiaangou/GeoRef
 BugReports: https://github.com/jiaangou/GeoRef/issues
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Imports: 
+    dplyr,
+    here,
+    mapview,
+    osfr,
+    purrr,
+    rlang,
+    sf,
+    tidyr
