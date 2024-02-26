@@ -33,6 +33,6 @@ if view == TRUE, then a map of output is returned. Otherwise an sf object contai
 The function takes in tabular data that contains geographic coordinates of point samples, projects it onto a coordinates system (default is ESPG:4269), and creates a buffer around each point. If view = TRUE, then a the buffers are visualized on a map. If a filename is provided, then the processes file is saved into the output_dir directory.
 }
 \examples{
-geo_data <- read_csv("my-spatial_data.csv")
+geo_data <- read.csv("my-spatial_data.csv")
 add_buffers(data = geo_data, buffer_radius = 50000, view = TRUE)
 }
