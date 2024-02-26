@@ -5,7 +5,7 @@
 #' @param project an osf_tbl object of the project
 #' @param component the component in which files should be accessed from
 #' @param type if "download" then all files on osf are downloaded ,if "upload",
-#' @param files name of files to be uploaded to OSF
+#' @param files name of files to be uploaded to OSF; these could names of the file in the working directory or paths
 #' @param overwrite logical argument specifying whether files should be overwritten
 
 #' @import dplyr
@@ -40,7 +40,7 @@ osf_updating <- function(project, component, type = c('download','upload'), file
     project%>%
       osfr::osf_ls_nodes()%>%
       dplyr::filter(name == component)%>%
-      osfr::osf_upload(path = files, conflicts = conf)
+      osfr::osf_upload(path = files, conflicts = conf, recurse = TRUE)
 
   }
   #Error message
