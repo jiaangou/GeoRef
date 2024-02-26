@@ -11,7 +11,7 @@
 #' @param output_dir directory name in which to export the file; "outdata" is set as the default
 
 #' @examples
-#' geo_data <- read_csv("my-spatial_data.csv")
+#' geo_data <- read.csv("my-spatial_data.csv")
 #' add_buffers(data = geo_data, buffer_radius = 50000, view = TRUE)
 
 #' @return if view == TRUE, then a map of output is returned. Otherwise an sf object containing the ID and geometry of points are returned.
