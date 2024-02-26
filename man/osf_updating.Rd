@@ -19,7 +19,7 @@ osf_updating(
 
 \item{type}{if "download" then all files on osf are downloaded ,if "upload",}
 
-\item{files}{name of files to be uploaded to OSF}
+\item{files}{name of files to be uploaded to OSF; these could names of the file in the working directory or paths}
 
 \item{overwrite}{logical argument specifying whether files should be overwritten}
 }
