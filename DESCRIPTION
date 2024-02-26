@@ -20,5 +20,6 @@ Imports:
     osfr,
     purrr,
     rlang,
+    roxygen2,
     sf,
     tidyr
