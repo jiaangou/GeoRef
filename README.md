@@ -2,7 +2,7 @@
 # GeoRef
 
 <!-- badges: start -->
-# <img src="man/figures/logo.png" align="right" height="200" />
+# <img src="man/figures/logo.png" align="right" height="240" />
 <!-- badges: end -->
 
 The goal of GeoRef is to ...
