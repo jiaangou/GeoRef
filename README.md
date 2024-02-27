@@ -1,5 +1,5 @@
 
-# GeoRef <img src="man/figures/logo.png" align="right" height="120"/>
+# GeoRef <img src="man/figures/logo.png" align="right" height="200"/>
 
 <!-- badges: start -->
 <!-- badges: end -->
