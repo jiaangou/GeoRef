@@ -21,6 +21,7 @@
 #' sample(10)
 #' subset_polygons(census, type = 'Cities', polygon_name = polygons, view = TRUE)
 
+#' @export
 
 
 

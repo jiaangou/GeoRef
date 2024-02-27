@@ -16,6 +16,9 @@
 
 #' @examples convex_hull(data = data, group = 'group')
 
+#' @export
+
+
 convex_hull <- function(data, group, crs = 4269){
 
   g_sym <- rlang::ensym(group) # Ensure g is treated as a symbol

@@ -19,6 +19,8 @@
 #' @import sf
 #' @import mapview
 
+#' @export
+
 
 add_buffers <- function(data, crs = 4269, buffer_radius = 500, view = FALSE, file_name = NULL, output_dir = "outdata"){
 

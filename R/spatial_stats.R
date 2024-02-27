@@ -15,6 +15,8 @@
 #' @import sf
 #' @import mapview
 
+#' @export
+
 spatial_statistics <- function(sf_object, view = FALSE){
 
   #Turn spherical geometry off
