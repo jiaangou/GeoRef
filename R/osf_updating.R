@@ -31,7 +31,7 @@ osf_updating <- function(project, component, type = c('download','upload'), file
       osfr::osf_ls_nodes()%>%
       dplyr::filter(name == component)%>%
       osfr::osf_ls_files()%>%
-      osfr::osf_download(conflicts = conf)
+      osfr::osf_download(conflicts = conf, recurse = TRUE)
 
   }
   #Uploading
