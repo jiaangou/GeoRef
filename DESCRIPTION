@@ -22,4 +22,5 @@ Imports:
     rlang,
     roxygen2,
     sf,
-    tidyr
+    tidyr,
+    units
