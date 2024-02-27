@@ -2,6 +2,7 @@
 
 export(osf_setup)
 export(osf_updating)
+export(spatial_statistics)
 import(dplyr)
 import(here)
 import(mapview)
