@@ -9,7 +9,7 @@ spatial_statistics(sf_object, view = FALSE)
 \arguments{
 \item{sf_object}{an sf object containing information of your shapefile}
 
-\item{map}{a logical arugment specifying whether the processed data should be visualized on a map}
+\item{view}{a logical arugment specifying whether the processed data should be visualized on a map}
 }
 \value{
 if view == TRUE, then a map of data is returned. Otherwise a table of calculated statistics is returned
