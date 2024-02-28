@@ -69,7 +69,7 @@ cities <- data.frame(
 add_buffers(cities, buffer_radius = 50000, view = TRUE)
 ```
 
-**5. Creating new polygons from multiple coordinates **
+**5. Creating new polygons from multiple coordinates**
 
 - Certain data sets will contain only point-coordinates. To get a measure of spatial extent, we can use the `multiple_coordinates()` function to generate a polygon based on the convex hull of those point-coordinates. A grouping variable should be supplied here so that the function knows which points should belong in the same convex hull. 
 
