@@ -11,7 +11,6 @@
 
 #' @return if view == TRUE, then a map of data is returned. Otherwise a table of calculated statistics is returned
 
-
 #' @import dplyr
 #' @import sf
 #' @import mapview
@@ -20,7 +19,7 @@
 
 #' @export
 
-spatial_stats <- function(sf_object, crs = 4269, view = FALSE){
+spatial_stats <- function(sf_object, view = FALSE){
 
   #Turn spherical geometry off
   sf::sf_use_s2(FALSE)
@@ -30,9 +29,7 @@ spatial_stats <- function(sf_object, crs = 4269, view = FALSE){
 
 
   #Centroids
-  ct <- sf::st_centroid(sf_object)%>%
-    sf::st_transform(crs = crs)
-
+  ct <- sf::st_centroid(sf_object)
 
   #Centroid cooridnates
   coordinates <- sf::st_coordinates(ct)%>%
