@@ -19,7 +19,7 @@
 #' @export
 
 
-convex_hull <- function(data, group, crs = 4269){
+multiple_coordinates <- function(data, group, crs = 4269){
 
   g_sym <- rlang::ensym(group) # Ensure g is treated as a symbol
 
