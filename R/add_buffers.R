@@ -3,7 +3,7 @@
 #' @description The function takes in tabular data that contains geographic coordinates of point samples, projects it onto a coordinates system (default is ESPG:4269), and creates a buffer around each point. If view = TRUE, then a the buffers are visualized on a map. If a filename is provided, then the processes file is saved into the output_dir directory.
 
 
-#' @param data a tabular data that contains covariates and spatial informationf
+#' @param data a tabular data that contains covariates and spatial information. In addition, the data shoule contain an `ID` variable as the identifier
 #' @param crs Coordinate Reference System used for projection
 #' @param buffer_radius radius in meters in which to create buffers
 #' @param file_name the filename in which the exported object will be; if NULL then nothing is exported

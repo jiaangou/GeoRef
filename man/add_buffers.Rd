@@ -14,7 +14,7 @@ add_buffers(
 )
 }
 \arguments{
-\item{data}{a tabular data that contains covariates and spatial informationf}
+\item{data}{a tabular data that contains covariates and spatial information. In addition, the data shoule contain an \code{ID} variable as the identifier}
 
 \item{crs}{Coordinate Reference System used for projection}
 
