@@ -7,7 +7,6 @@
 #' @param crs the coordinate system that data should be projected onto
 
 #' @import dplyr
-#' @import rlang
 #' @import sf
 #' @import purrr
 #' @import tidyr
