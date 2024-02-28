@@ -3,7 +3,6 @@
 #' @description The function takes in spatial information and calculates its area, centroid positions, and area bin class.
 
 #' @param sf_object an sf object containing information of your shapefile
-#' @param crs coordinate system in which Lat/Long coordinates are projected into
 #' @param view a logical arugment specifying whether the processed data should be visualized on a map
 
 #' @examples

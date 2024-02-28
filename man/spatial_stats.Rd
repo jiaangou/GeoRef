@@ -10,8 +10,6 @@ spatial_stats(sf_object, view = FALSE)
 \item{sf_object}{an sf object containing information of your shapefile}
 
 \item{view}{a logical arugment specifying whether the processed data should be visualized on a map}
-
-\item{crs}{coordinate system in which Lat/Long coordinates are projected into}
 }
 \value{
 if view == TRUE, then a map of data is returned. Otherwise a table of calculated statistics is returned
