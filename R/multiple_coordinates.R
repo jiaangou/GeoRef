@@ -21,14 +21,17 @@
 
 multiple_coordinates <- function(data, group, crs = 4269){
 
-  g_sym <- rlang::ensym(group) # Ensure g is treated as a symbol
+  #Checking grouping variable is a charcater string
+  if (!is.character(group)) {
+    stop("The argument 'group' must be a character string.")
+  }
 
   #Project data
   project <- sf::st_as_sf(data, coords = c("Longitude", "Latitude"), crs = crs)
 
-  #Nest data by group and calcuate convex hull by group
+  #Nest data by group and calculate convex hull by group
   out <- project%>%
-    dplyr::group_by(!!g_sym) %>% # Dynamically group by the specified variable
+    dplyr::group_by(.data[[group]]) %>%
     tidyr::nest()%>%
     mutate(ConvexHull = purrr::map(data, function(x)x%>%
                                      sf::st_union()%>%
