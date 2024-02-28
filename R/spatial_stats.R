@@ -19,7 +19,7 @@
 
 #' @export
 
-spatial_statistics <- function(sf_object, crs = 4269, view = FALSE){
+spatial_stats <- function(sf_object, crs = 4269, view = FALSE){
 
   #Turn spherical geometry off
   sf::sf_use_s2(FALSE)
