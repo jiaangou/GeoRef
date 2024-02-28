@@ -16,6 +16,7 @@
 #' @import sf
 #' @import mapview
 #' @import units
+#' @import lwgeom
 
 #' @export
 
