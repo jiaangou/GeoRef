@@ -76,7 +76,7 @@ add_buffers(cities, buffer_radius = 50000, view = TRUE)
 ```r
 convexhull_polygons <- cities%>%
   mutate(group = rep(c(1,2), times = 3))%>% #Create a grouping variable named "group"
-  GeoRef::multiple_coordinates(group = group)
+  multiple_coordinates(group = group)
 ```
 
 
@@ -86,7 +86,7 @@ convexhull_polygons <- cities%>%
 
 ``` r
 convexhull_polygons$ConvexHull%>%
-  lapply(function(x)GeoRef::spatial_stats(x))%>%
+  lapply(function(x)spatial_stats(x))%>%
   bind_rows()
 
 ```
