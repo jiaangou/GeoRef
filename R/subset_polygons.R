@@ -25,7 +25,6 @@
 
 
 
-
 subset_polygons <- function(sf_object, type = c('Parks', 'Watershed', 'Cities'), polygon_name = NULL, view = FALSE){
 
   #Filter if names are supplied
