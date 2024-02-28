@@ -19,8 +19,6 @@ Imports:
     mapview,
     osfr,
     purrr,
-    rlang,
-    roxygen2,
     sf,
     tidyr,
     units,
