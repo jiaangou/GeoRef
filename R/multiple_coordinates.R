@@ -13,7 +13,7 @@
 
 #' @return a grouped tibble with grouping variable, nested version of original data, and respective convex hull geometry information
 
-#' @examples convex_hull(data = data, group = 'group')
+#' @examples multiple_coordinates(data = data, group = 'group')
 
 #' @export
 
