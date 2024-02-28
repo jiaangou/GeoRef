@@ -20,5 +20,5 @@ a grouped tibble with grouping variable, nested version of original data, and re
 Studies that uses multiple coordinates to specifies its spatial extent can be aggregated by combining these coordinates into a single polygon described by the convex hull of these points. This function takes in data containing coordinate information and a grouping variable and computes a convex hull for each group.
 }
 \examples{
-convex_hull(data = data, group = 'group')
+multiple_coordinates(data = data, group = 'group')
 }
