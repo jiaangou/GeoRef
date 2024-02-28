@@ -23,4 +23,5 @@ Imports:
     roxygen2,
     sf,
     tidyr,
-    units
+    units,
+    lwgeom
