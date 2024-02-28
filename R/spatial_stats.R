@@ -3,6 +3,7 @@
 #' @description The function takes in spatial information and calculates its area, centroid positions, and area bin class.
 
 #' @param sf_object an sf object containing information of your shapefile
+#' @param crs coordinate system in which Lat/Long coordinates are projected into
 #' @param view a logical arugment specifying whether the processed data should be visualized on a map
 
 #' @examples
@@ -18,7 +19,7 @@
 
 #' @export
 
-spatial_statistics <- function(sf_object, view = FALSE){
+spatial_statistics <- function(sf_object, crs = 4269, view = FALSE){
 
   #Turn spherical geometry off
   sf::sf_use_s2(FALSE)
@@ -26,8 +27,11 @@ spatial_statistics <- function(sf_object, view = FALSE){
   #Area
   Area <- sf::st_area(sf_object)
 
+
   #Centroids
-  ct <- sf::st_centroid(sf_object)
+  ct <- sf::st_centroid(sf_object)%>%
+    sf::st_transform(crs = crs)
+
 
   #Centroid cooridnates
   coordinates <- sf::st_coordinates(ct)%>%
