@@ -33,14 +33,14 @@ spatial_stats <- function(sf_object, view = FALSE){
   #Centroid cooridnates
   coordinates <- sf::st_coordinates(ct)%>%
     as.data.frame()%>%
-    dplyr::rename(`Centroid_Latitude` = X)%>%
-    dplyr::rename(`Centroid_Longitude` = Y)
+    dplyr::rename(`Cent_lat` = X)%>%
+    dplyr::rename(`Cent_long` = Y)
 
 
   #Combine
   out <-  data.frame(Area_sqkm = units::set_units(Area, km^2))%>%
     dplyr::bind_cols(coordinates)%>%
-    dplyr::mutate(Area_bin = case_when(
+    dplyr::mutate(Ext_bin = case_when(
       Area_sqkm  < units::set_units(10, km^2) ~ '<10',
       Area_sqkm  < units::set_units(10^2, km^2) ~ '<10^2',
       Area_sqkm  < units::set_units(10^3, km^2) ~ '<10^3',
